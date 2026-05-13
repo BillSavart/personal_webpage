@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import portrait from "./assets/portrait.svg";
 
 type Project = {
@@ -6,7 +7,6 @@ type Project = {
   summary: string;
   impact: string;
   tags: string[];
-  links: { label: string; href: string; icon: string }[];
 };
 
 type TimelineItem = {
@@ -16,83 +16,121 @@ type TimelineItem = {
 };
 
 const profile = {
-  name: "Bill Wang",
-  role: "Frontend / Full-stack Developer",
+  name: "Kai-Hung (Bill) Wang",
+  role: "HCI / XR Researcher & Creative Technologist",
   location: "Taipei, Taiwan",
-  email: "hello@example.com",
+  email: "billwang.tech@gmail.com",
   github: "https://github.com/BillSavart",
-  linkedin: "https://www.linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/kai-hung-wang-4b25ba1a4/",
   resume: `${import.meta.env.BASE_URL}resume.pdf`,
 };
 
 const strengths = [
-  "React + TypeScript 產品介面開發",
-  "API 串接、資料流程與系統整合",
-  "從需求拆解到可展示 Demo 的執行力",
-  "重視使用者體驗、可維護性與交付品質",
+  "Human-Computer Interaction and embodied interaction research",
+  "VR / AR / MR / XR application prototyping and development",
+  "3D / 4D Gaussian Splatting and AI-generated immersive environments",
+  "Bilingual communication in Mandarin and English with TOEIC 960",
 ];
 
 const projects: Project[] = [
   {
-    title: "Cloud Native Access Control",
-    type: "Backend / Data Pipeline",
+    title: "Smileoyed",
+    type: "XR / Affective Interaction",
     summary:
-      "設計門禁事件從 API、Kafka 到 PostgreSQL 報表資料庫的完整流程，並加入 Redis 離線緩衝與恢復機制。",
-    impact: "強化系統在服務中斷時的資料完整性，讓 demo 可以用一鍵腳本穩定重現。",
-    tags: ["Go", "Kafka", "Redis", "PostgreSQL", "Docker"],
-    links: [
-      { label: "GitHub", href: profile.github, icon: "bi-github" },
-      { label: "Case", href: "#contact", icon: "bi-arrow-up-right" },
-    ],
+      "Embodied virtual pet system for behavioral affective synchrony with multisensory and biofeedback interaction.",
+    impact: "Selected for SIGGRAPH 2026 Immersive Pavilion as a collaborative XR research work.",
+    tags: ["VR", "HCI", "Biofeedback", "Emotion Detection", "Unity", "Raspberry Pi"],
   },
   {
-    title: "HMD Tracking Model Workflow",
-    type: "ML / Unity Integration",
+    title: "Co-located VR Avatar Animation",
+    type: "VR / Embodied Character Control",
     summary:
-      "整理姿態追蹤模型的重新訓練與 ONNX 替換流程，確認 Unity runtime 的 tensor contract 與資產引用方式。",
-    impact: "降低模型替換造成 runtime 破壞的風險，讓研究實驗能安全進入互動專案。",
-    tags: ["PyTorch", "ONNX", "Unity", "Sentis"],
-    links: [
-      { label: "GitHub", href: profile.github, icon: "bi-github" },
-      { label: "Notes", href: "#experience", icon: "bi-journal-text" },
-    ],
+      "Headset-based multi-user co-located VR synchronous full-body avatar animation via embodied character controller.",
+    impact: "Explores natural multi-user presence and body representation in shared immersive environments.",
+    tags: ["VR", "Avatar Animation", "Unity", "Embodied Interaction", "Machine Learning"],
   },
   {
-    title: "Raspberry Pi Motor Control",
-    type: "Hardware / TCP Control",
+    title: "Oriental Beauty",
+    type: "XR Theatre / Digital Humanities",
     summary:
-      "為 Unity 與 Raspberry Pi 的 TCP 控制流程補上連線穩定性、訊息解析與硬體驅動切換方案。",
-    impact: "保留既有硬體路徑，同時新增可平行測試的新驅動版本，讓實驗現場更容易回復。",
-    tags: ["Python", "Raspberry Pi", "TCP", "Unity"],
-    links: [
-      { label: "GitHub", href: profile.github, icon: "bi-github" },
-      { label: "Demo", href: "#projects", icon: "bi-play-circle" },
-    ],
+      "XR theatre project connecting Taiwan literature, music, and immersive interaction for cultural storytelling.",
+    impact: "Bridges technical prototyping with narrative experience design in a collaborative research setting.",
+    tags: ["XR", "VR", "Unity", "4D Gaussian Splatting"],
+  },
+  {
+    title: "Relaxing World",
+    type: "AI-generated VR Environment",
+    summary:
+      "AI-generated VR relaxation environments using 3D Gaussian Splatting and real-time voice conversion.",
+    impact: "Combines immersive scene reconstruction, generative media, and real-time interaction for relaxation experiences.",
+    tags: ["3D Gaussian Splatting", "VR", "Voice Conversion"],
   },
 ];
 
 const timeline: TimelineItem[] = [
   {
-    period: "Now",
-    title: "Building Practical Software Projects",
+    period: "Sep 2025 - Present",
+    title: "M.S., National Taiwan University",
     description:
-      "把課程、研究與個人專案整理成可展示、可部署、可說明的作品集，聚焦在工程判斷與完整交付。",
+      "Graduate Institute of Networking and Multimedia. Advised by Prof. Yi-Ping Hung, focusing on HCI and VR / AR / MR / XR application development.",
   },
   {
-    period: "2025 - 2026",
-    title: "System Integration & Web Development",
+    period: "Mar 2025 - Present",
+    title: "Graduate Research Assistant, Image and Vision Lab",
     description:
-      "累積 React、TypeScript、後端 API、資料庫、容器化與硬體串接經驗，習慣以 demo 驗證設計。",
+      "Researching embodied XR interaction, co-located VR avatar animation, XR theatre, affective virtual pets, and AI-generated VR environments.",
   },
   {
-    period: "Before",
-    title: "Design-minded Engineering",
+    period: "Sep 2016 - Jun 2020",
+    title: "B.S., National Cheng Kung University",
     description:
-      "喜歡乾淨、安靜但有細節的介面，也重視程式碼在不同環境下能被理解、維護與接手。",
+      "Computer Science and Information Engineering. Undergraduate research on an intelligent firefighting command system based on image processing and inertial navigation.",
+  },
+  {
+    period: "Feb 2022 - Aug 2024",
+    title: "Bank Teller, Taiwan Cooperative Bank",
+    description:
+      "Handled front-line financial service operations, building professional communication habits, accuracy under pressure, and client-facing responsibility.",
   },
 ];
 
 function App() {
+  useEffect(() => {
+    const nav = document.querySelector(".site-nav");
+    const revealItems = document.querySelectorAll<HTMLElement>("[data-reveal]");
+
+    const updateNav = () => {
+      nav?.classList.toggle("is-scrolled", window.scrollY > 12);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.16 },
+    );
+
+    revealItems.forEach((item, index) => {
+      const delayStep = item.classList.contains("quick-reveal") ? 25 : 45;
+      const delayCap = item.classList.contains("quick-reveal") ? 100 : 180;
+      item.style.setProperty("--reveal-delay", `${Math.min(index * delayStep, delayCap)}ms`);
+      observer.observe(item);
+    });
+
+    updateNav();
+    window.addEventListener("scroll", updateNav, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", updateNav);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg fixed-top site-nav">
@@ -135,15 +173,16 @@ function App() {
         <section className="hero-section">
           <div className="container">
             <div className="row align-items-center g-5">
-              <div className="col-lg-7">
+              <div className="col-lg-7 hero-copy-block">
                 <p className="eyebrow mb-3">{profile.location}</p>
                 <h1 className="hero-title">
-                  {profile.name}
-                  <span>{profile.role}</span>
+                  <span className="hero-name">{profile.name}</span>
+                  <span className="hero-role">{profile.role}</span>
                 </h1>
                 <p className="hero-copy">
-                  我把想法整理成清楚、穩定、可以被展示的產品雛形。偏好簡潔的介面、
-                  扎實的工程流程，以及能讓團隊放心接手的實作細節。
+                  Master Student in Graduate Institute of Networking and Multimedia, National Taiwan University.
+                  I build immersive systems across HCI, XR, embodied interaction,
+                  Gaussian Splatting, and Raspberry Pi based physical computing.
                 </p>
                 <div className="d-flex flex-wrap gap-3 mt-4">
                   <a className="btn btn-dark btn-lg icon-btn" href="#projects">
@@ -161,12 +200,12 @@ function App() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-5">
+              <div className="col-lg-5 hero-visual-block">
                 <div className="portrait-panel">
                   <img src={portrait} alt="Minimal editorial portrait illustration" />
                   <div className="availability">
-                    <span>Open to internships and junior roles</span>
-                    <strong>Frontend / Full-stack</strong>
+                    <span>Open to research and engineering opportunities</span>
+                    <strong>HCI / XR / Creative Technology</strong>
                   </div>
                 </div>
               </div>
@@ -176,13 +215,16 @@ function App() {
 
         <section className="section-band" id="skills">
           <div className="container">
-            <div className="section-heading">
+            <div className="section-heading profile-heading">
               <p className="eyebrow">Profile</p>
-              <h2>安靜但有力的工程感</h2>
+              <h2 className="profile-heading-title">
+                Building immersive systems from research{" "}
+                <span className="text-nowrap">to prototype</span>
+              </h2>
             </div>
             <div className="row g-4">
               {strengths.map((item) => (
-                <div className="col-md-6 col-xl-3" key={item}>
+                <div className="col-md-6 col-xl-3" key={item} data-reveal>
                   <div className="strength-card">
                     <i className="bi bi-check2-circle" aria-hidden="true" />
                     <p>{item}</p>
@@ -197,14 +239,15 @@ function App() {
           <div className="container">
             <div className="section-heading wide">
               <p className="eyebrow">Selected Work</p>
-              <h2>能被面試官快速理解的作品</h2>
-              <p>
-                每個專案都保留問題、策略、技術選擇與成果，方便在履歷或面試中延伸說明。
+              <h2>Research-driven projects with working prototypes</h2>
+              <p className="selected-work-copy">
+                Selected work across embodied XR interaction, immersive media,
+                and real-time system integration.
               </p>
             </div>
             <div className="project-list">
               {projects.map((project, index) => (
-                <article className="project-card" key={project.title}>
+                <article className="project-card quick-reveal" key={project.title} data-reveal>
                   <div className="project-index">{String(index + 1).padStart(2, "0")}</div>
                   <div>
                     <p className="project-type">{project.type}</p>
@@ -217,14 +260,6 @@ function App() {
                       ))}
                     </div>
                   </div>
-                  <div className="project-actions">
-                    {project.links.map((link) => (
-                      <a className="btn btn-outline-dark icon-only" href={link.href} key={link.label}>
-                        <i className={`bi ${link.icon}`} aria-hidden="true" />
-                        <span className="visually-hidden">{link.label}</span>
-                      </a>
-                    ))}
-                  </div>
                 </article>
               ))}
             </div>
@@ -235,15 +270,15 @@ function App() {
           <div className="container">
             <div className="row g-5">
               <div className="col-lg-4">
-                <div className="section-heading sticky-heading">
+                <div className="section-heading">
                   <p className="eyebrow">Experience</p>
-                  <h2>從作品看見成長脈絡</h2>
+                  <h2>Education and research experience</h2>
                 </div>
               </div>
               <div className="col-lg-8">
                 <div className="timeline">
                   {timeline.map((item) => (
-                    <div className="timeline-item" key={item.title}>
+                    <div className="timeline-item quick-reveal" key={item.title} data-reveal>
                       <time>{item.period}</time>
                       <div>
                         <h3>{item.title}</h3>
@@ -261,7 +296,7 @@ function App() {
           <div className="container">
             <div className="contact-inner">
               <p className="eyebrow">Contact</p>
-              <h2>Let us build something quietly excellent.</h2>
+              <h2 className="contact-title">Available for R&D and SWE roles.</h2>
               <div className="contact-actions">
                 <a className="btn btn-light btn-lg icon-btn" href={`mailto:${profile.email}`}>
                   <i className="bi bi-envelope" aria-hidden="true" />
