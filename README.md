@@ -1,11 +1,15 @@
 # Kai-Hung (Bill) Wang Portfolio
 
-This is a personal portfolio website for job and research opportunities. It is
-built with React, TypeScript, Vite, and Bootstrap, and is configured for GitHub
-Pages deployment.
+This is a bilingual personal portfolio website for job and research
+opportunities. It is built with React, TypeScript, Vite, and Bootstrap, and is
+configured for GitHub Pages deployment.
 
-The website focuses on HCI, XR, embodied interaction, Gaussian Splatting, and
-research-driven prototype work.
+The website focuses on HCI, XR, embodied interaction, Gaussian Splatting,
+Gaussian Avatar, embedded interaction prototyping with Raspberry Pi / STM32,
+and shipped product / cloud-native systems work.
+
+The default language is English. Visitors can switch the main site content to
+Traditional Chinese from the navigation bar.
 
 ## Tech Stack
 
@@ -17,6 +21,18 @@ research-driven prototype work.
 - GitHub Pages
 - GitHub Actions
 
+## Current Site Features
+
+- First Bank-inspired green and gold visual palette
+- English / Traditional Chinese language toggle
+- Profile highlight cards for HCI, XR, Gaussian Avatar, embedded prototyping,
+  and bilingual communication
+- Grouped project presentation:
+  - `Research / XR` for immersive interaction and research prototypes
+  - `Product & Systems` for shipped side projects and course systems
+- External links for the live public-bank interview prep site and the
+  NTU CloudNative course project repository
+
 ## Project Structure
 
 ```text
@@ -26,7 +42,7 @@ research-driven prototype work.
 │   ├── README.md                 # Notes for public assets
 │   └── resume.pdf                # Resume opened by the Resume button
 ├── src/
-│   ├── App.tsx                   # Main portfolio content and layout
+│   ├── App.tsx                   # Bilingual portfolio content and layout
 │   ├── styles.css                # Site styling and animation
 │   ├── main.tsx                  # React entry point
 │   └── assets/portrait.svg       # Hero illustration
@@ -102,16 +118,25 @@ src/App.tsx
 
 Useful sections to edit:
 
-- `profile`: name, role, email, GitHub, LinkedIn, resume link
-- `strengths`: profile highlight cards
-- `projects`: selected work cards
-- `timeline`: education, research, and work experience
+- `profile`: name, email, GitHub, LinkedIn, resume link
+- `content.en`: English navigation, hero, profile cards, projects, timeline,
+  and contact copy
+- `content.zh`: Traditional Chinese navigation, hero, profile cards, projects,
+  timeline, and contact copy
+- `projectGroups`: selected work cards grouped into research and engineering
+  sections inside each language block
+- `timeline`: education, research, and work experience inside each language
+  block
 
 Main styling and animation lives in:
 
 ```text
 src/styles.css
 ```
+
+The language toggle is implemented with local React state in `src/App.tsx`.
+Because content is re-rendered when the language changes, the reveal animation
+observer is also re-attached after language switches.
 
 ## Deployment
 
