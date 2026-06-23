@@ -293,6 +293,15 @@ function App() {
               <a className="nav-link" href="#experience">
                 {copy.nav.experience}
               </a>
+              <a
+                className="btn btn-sm btn-outline-dark nav-cta"
+                href={profile.resume}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="bi bi-file-earmark-text" aria-hidden="true" />
+                {copy.hero.resume}
+              </a>
               <a className="btn btn-sm btn-outline-dark nav-cta" href="#contact">
                 <i className="bi bi-send" aria-hidden="true" />
                 {copy.nav.contact}
