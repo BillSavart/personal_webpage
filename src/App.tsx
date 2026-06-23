@@ -167,7 +167,7 @@ const content: Record<Language, SiteContent> = {
         description: "Independent engineering projects that turn domain problems into shipped, usable systems.",
         projects: [
           {
-            title: "Public Bank Interview Advisor",
+            title: "Bank Interview Advisor",
             type: "Side Project / Exam Prep Platform",
             summary:
               "Self-hosted preparation platform for public-bank exams with interview question filtering, an exam calendar, written-score threshold maps, answer guidance, ratings, comments, and experience posts.",
@@ -183,13 +183,13 @@ const content: Record<Language, SiteContent> = {
             ],
           },
           {
-            title: "NTU CloudNative Access Control System",
+            title: "Distributed Physical Access Control System",
             type: "Course Project / Cloud Native Systems",
             summary:
               "Distributed physical access-control system designed for 90,000 employees, balancing millisecond-level door decisions with read-heavy attendance and audit reporting.",
             impact:
-              "Built write-heavy and read-heavy service paths with Redis anti-passback checks, Kafka event streaming, FastAPI reporting, PostgreSQL storage, Kubernetes deployment, and Grafana observability.",
-            tags: ["Go", "Redis", "Kafka", "FastAPI", "PostgreSQL", "Kubernetes", "Grafana"],
+              "Built write-heavy and read-heavy service paths with Redis anti-passback checks, Kafka event streaming, FastAPI reporting, PostgreSQL storage, Docker Compose deployment, and Grafana observability.",
+            tags: ["Go", "Redis", "Kafka", "FastAPI", "PostgreSQL", "Docker Compose", "Grafana"],
             links: [
               {
                 label: "GitHub",
@@ -208,15 +208,9 @@ const content: Record<Language, SiteContent> = {
     timeline: [
       {
         period: "Sep 2025 - Present",
-        title: "M.S., National Taiwan University",
+        title: "M.S., Image and Vision Lab, National Taiwan University",
         description:
           "Graduate Institute of Networking and Multimedia. Advised by Prof. Yi-Ping Hung, focusing on HCI, VR / AR / MR / XR application development, and Gaussian Avatar research.",
-      },
-      {
-        period: "Mar 2025 - Present",
-        title: "Graduate Research Assistant, Image and Vision Lab",
-        description:
-          "Researching embodied XR interaction, Gaussian Avatar, co-located VR avatar animation, XR theatre, affective virtual pets, and AI-generated VR environments.",
       },
       {
         period: "Sep 2016 - Jun 2020",
@@ -331,12 +325,12 @@ const content: Record<Language, SiteContent> = {
             ],
           },
           {
-            title: "NTU CloudNative 分散式門禁系統",
+            title: "分散式實體門禁系統",
             type: "課堂專案 / Cloud Native Systems",
             summary: "為 9 萬名員工規模設計的分散式實體門禁系統，同時處理毫秒級開門決策與讀取量大的出勤審計報表。",
             impact:
-              "實作 write-heavy 與 read-heavy 服務路徑，包含 Redis anti-passback、Kafka event streaming、FastAPI reporting、PostgreSQL、Kubernetes deployment 與 Grafana observability。",
-            tags: ["Go", "Redis", "Kafka", "FastAPI", "PostgreSQL", "Kubernetes", "Grafana"],
+              "實作 write-heavy 與 read-heavy 服務路徑，包含 Redis anti-passback、Kafka event streaming、FastAPI reporting、PostgreSQL、Docker Compose deployment 與 Grafana observability。",
+            tags: ["Go", "Redis", "Kafka", "FastAPI", "PostgreSQL", "Docker Compose", "Grafana"],
             links: [
               {
                 label: "GitHub",
@@ -355,15 +349,9 @@ const content: Record<Language, SiteContent> = {
     timeline: [
       {
         period: "2025 Sep - Present",
-        title: "國立臺灣大學 碩士班",
+        title: "國立臺灣大學 Image and Vision Lab 碩士班",
         description:
           "就讀網路與多媒體研究所，指導教授為洪一平教授，研究方向包含 HCI、VR / AR / MR / XR 應用開發與 Gaussian Avatar。",
-      },
-      {
-        period: "2025 Mar - Present",
-        title: "Image and Vision Lab 研究助理",
-        description:
-          "研究 embodied XR interaction、Gaussian Avatar、co-located VR avatar animation、XR theatre、affective virtual pets 與 AI-generated VR environments。",
       },
       {
         period: "2016 Sep - 2020 Jun",
