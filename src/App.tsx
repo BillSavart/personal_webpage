@@ -211,12 +211,6 @@ const content: SiteContent = {
       description:
         "Computer Science and Information Engineering. Undergraduate research on an intelligent firefighting command system based on image processing and inertial navigation.",
     },
-    {
-      period: "Feb 2022 - Aug 2024",
-      title: "Bank Teller, Taiwan Cooperative Bank",
-      description:
-        "Handled front-line financial service operations, building professional communication habits, accuracy under pressure, and client-facing responsibility.",
-    },
   ],
   contactSection: {
     eyebrow: "Contact",
