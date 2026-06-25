@@ -134,7 +134,7 @@ const content: SiteContent = {
           summary:
             "Headset-based multi-user co-located VR synchronous full-body avatar animation via embodied character controller.",
           impact: "Explores natural multi-user presence and body representation in shared immersive environments.",
-          tags: ["VR", "Avatar Animation", "Gaussian Avatar", "Unity", "Embodied Interaction"],
+          tags: ["VR", "Avatar Animation", "Unity", "Embodied Interaction"],
         },
         {
           title: "Oriental Beauty",
@@ -151,7 +151,7 @@ const content: SiteContent = {
             "AI-generated VR relaxation environments using 3D Gaussian Splatting and real-time voice conversion.",
           impact:
             "Combines immersive scene reconstruction, generative media, and real-time interaction for relaxation experiences.",
-          tags: ["3D Gaussian Splatting", "VR", "Voice Conversion"],
+          tags: ["3D Gaussian Splatting", "VR", "Voice Conversion", "Unity"],
         },
       ],
     },
@@ -182,7 +182,7 @@ const content: SiteContent = {
             "Distributed physical access-control system designed for 90,000 employees, balancing millisecond-level door decisions with read-heavy attendance and audit reporting.",
           impact:
             "Built write-heavy and read-heavy service paths with Redis anti-passback checks, Kafka event streaming, FastAPI reporting, PostgreSQL storage, Docker Compose deployment, and Grafana observability.",
-          tags: ["Go", "Redis", "Kafka", "FastAPI", "PostgreSQL", "Docker Compose", "Grafana"],
+          tags: ["Go", "React", "TypeScript", "Redis", "Kafka", "FastAPI", "PostgreSQL", "Docker Compose", "Prometheus", "Grafana", "Caddy", "GCP"],
           links: [
             {
               label: "GitHub",
@@ -196,14 +196,14 @@ const content: SiteContent = {
   ],
   experienceSection: {
     eyebrow: "Experience",
-    title: "Education and research experience",
+    title: "Education",
   },
   timeline: [
     {
       period: "Sep 2025 - Present",
       title: "M.S., Image and Vision Lab, National Taiwan University",
       description:
-        "Graduate Institute of Networking and Multimedia. Advised by Prof. Yi-Ping Hung, focusing on HCI, VR / AR / MR / XR application development, and Gaussian Avatar research.",
+        "Graduate Institute of Networking and Multimedia. Advised by Prof. Yi-Ping Hung, focusing on HCI, VR / AR / MR / XR application development, 3D / 4D Gaussian Splatting, and Gaussian Avatar research.",
     },
     {
       period: "Sep 2016 - Jun 2020",
